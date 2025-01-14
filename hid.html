@@ -1,0 +1,15 @@
+<style>
+    .desktop-only { display: block; }
+    .mobile-only { display: none; }
+    @media (max-width: 768px) {
+      .desktop-only { display: none; }
+      .mobile-only { display: block; }
+    }
+  </style>
+  
+  <div class="desktop-only">
+    Nội dung dành cho Desktop
+        <img src="penguine.png">
+  </div>
+  <div class="mobile-only">Nội dung dành cho Mobile</div>
+  

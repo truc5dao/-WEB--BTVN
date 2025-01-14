@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flexbox</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .item {
+      background-color: lightcoral;
+      flex: 1 1 calc(33.33% - 10px); /* 3 items per row */
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 768px) {
+      .item {
+        flex: 1 1 calc(50% - 10px); /* 2 items per row */
+      }
+    }
+    @media (max-width: 480px) {
+      .item {
+        flex: 1 1 100%; /* 1 item per row */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+</body>
+</html>
